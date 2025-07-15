@@ -16,8 +16,8 @@ onMounted (()=> {
 })
 
 const router = useRouter();
-const irPersonaje = () => {
-    router.push('/personaje')
+const irPersonaje = (id) => {
+    router.push('/personaje/'+id)
 }
 </script>
 
@@ -28,7 +28,7 @@ const irPersonaje = () => {
         <img :src="dato.image" alt="Imagen del personaje" class="card-img-top" />
         <div class="card-body">
             <h5 class="card-title"> {{ dato.name  }}</h5>
-            <button v-on:click="irPersonaje" class="btn btn-success"> Saber más </button>
+            <button v-on:click="irPersonaje(dato.id)" class="btn btn-success"> Saber más </button>
         </div>
     </div>
 
