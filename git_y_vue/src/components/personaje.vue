@@ -1,9 +1,10 @@
 <script setup>
 import {ref,onMounted} from 'vue'
 import axios from 'axios'
-import {useRoute} from 'vue-router' 
+import {useRoute,useRouter} from 'vue-router' 
 
 const personaje = ref(null);
+const router = useRouter()
 const route = useRoute()
 
 onMounted (()=> {
@@ -17,6 +18,9 @@ onMounted (()=> {
     }) 
 }) 
 
+const volverPagina = () => {
+    router.push('/')
+}
 
 </script>
 
@@ -33,6 +37,7 @@ onMounted (()=> {
             <p class="card-text"> Type: {{ personaje.type }}</p>
             <p class="card-text"> Gender: {{ personaje.gender }}</p>
             <p class="card-text"> Origin: {{ personaje.origin.name }}</p>
+            <button v-on:click="volverPagina" class="btn btn-success"> Volver a la pag principal</button>
         
         </div>
     </div> 
