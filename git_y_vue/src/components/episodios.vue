@@ -1,10 +1,9 @@
-<script>
+<script setup>
+
 </script>
 
 <template>
-    <h1> HOME </h1>
-
-     <div id="app">
+    <div id="app">
        <nav>
          <router-link to="/">Home</router-link> |
          <router-link to="/personajes">Personajes</router-link> |
@@ -13,12 +12,9 @@
        <router-view />
      </div>
 
-</template> 
+    <h1>Aquí voy a hacer lo de los episodios porque por qué no me voy a complicar la vida</h1>
+
+</template>
 
 <style>
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #333;
-}
 </style>

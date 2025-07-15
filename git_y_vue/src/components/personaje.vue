@@ -19,7 +19,7 @@ onMounted (()=> {
 }) 
 
 const volverPagina = () => {
-    router.push('/')
+    router.push('/personajes')
 }
 
 </script>
@@ -37,7 +37,7 @@ const volverPagina = () => {
             <p class="card-text"> Type: {{ personaje.type }}</p>
             <p class="card-text"> Gender: {{ personaje.gender }}</p>
             <p class="card-text"> Origin: {{ personaje.origin.name }}</p>
-            <button v-on:click="volverPagina" class="btn btn-success"> Volver a la pag principal</button>
+            <button v-on:click="volverPagina" class="btn btn-success"> Volver a todos los personajes</button>
         
         </div>
     </div> 
