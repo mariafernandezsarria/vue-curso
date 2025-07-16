@@ -3,6 +3,7 @@ import Home  from "../components/Home.vue"
 import Personajes from "../components/todospersonajes.vue"
 import Personaje from "../components/personaje.vue"
 import Episodios from '@/components/episodios.vue';
+import characters from '../components/characters.vue'
 
 const router = createRouter ({
     history: createWebHistory(),
@@ -26,6 +27,11 @@ const router = createRouter ({
             path: "/episodios",
             name: "episodios",
             component: Episodios
+        },
+        {
+            path: "/episodio/:id",
+            name: "episodio",
+            component: characters
         }
     ]
 })
