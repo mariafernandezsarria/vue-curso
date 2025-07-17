@@ -23,21 +23,23 @@ const verPersonajes = (id) => {
 </script>
 
 <template>
-    <div id="app">
+    <div id="app" class="mt-4">
        <nav>
          <router-link to="/">Home</router-link> |
          <router-link to="/personajes">Personajes</router-link> |
-         <router-link to="/episodios">Episodios</router-link>
+         <router-link to="/episodios" class="bg-indigo-400">Episodios</router-link>
        </nav>
        <router-view />
      </div>
 
-    <div v-for="(dato,index) in arrayDatos" v-bind:key="index" class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">{{ dato.name }}</h5>
-        <p class="card-text">{{ dato.episode }}</p>
-        <p class="card-text">{{ dato.air_date }}</p>        
-        <button v-on:click="verPersonajes(dato.id)" class="btn btn-primary">Ver personajes</button>
+    <div class="grid grid-cols-3 gap-1 m-1">
+      <div v-for="(dato,index) in arrayDatos" v-bind:key="index" class="card m-3 hover:outline-2" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ dato.name }}</h5>
+          <p class="card-text">{{ dato.episode }}</p>
+          <p class="card-text">{{ dato.air_date }}</p>        
+          <button v-on:click="verPersonajes(dato.id)" class="bg-indigo-300 p-2 rounded hover:bg-indigo-400">Ver personajes</button>
+        </div>
       </div>
     </div>
 

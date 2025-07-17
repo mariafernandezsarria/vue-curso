@@ -32,8 +32,8 @@ onMounted(async () => {
 <template>
   <h1>Personajes capítulo</h1>
 
-    <div v-if="personajes.length">
-        <div v-for="(personaje, index) in personajes" v-bind:key="index" class="card mb-3" style="width: 18rem;">
+    <div v-if="personajes.length" class="grid grid-cols-3 gap-3 m-3">
+        <div v-for="(personaje, index) in personajes" v-bind:key="index" class="card mb-3 hover:outline-2" style="width: 18rem;">
             <img :src="personaje.image" class="card-img-top" :alt="personaje.name">
             <div class="card-body">
                 <h5 class="card-title">{{ personaje.name }}</h5>
@@ -48,7 +48,9 @@ onMounted(async () => {
         <p>Cargando personajes...</p>
     </div>
 
-    <button @click="volverEpisodios" class="btn btn-success">Volver a los episodios</button>
+    <div style="text-align: center;">
+      <button @click="volverEpisodios" class="bg-indigo-300 pb-2 pt-2 pl-5 pr-5 mb-3 self-center rounded hover:bg-indigo-400">Volver a los episodios</button>
+    </div>
 </template>
 
 <style>

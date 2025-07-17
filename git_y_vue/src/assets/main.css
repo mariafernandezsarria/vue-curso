@@ -1,5 +1,7 @@
 @import './base.css';
 
+@import "tailwindcss";
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -11,25 +13,36 @@
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: white;
+  font-weight: bold;
   transition: 0.4s;
-  padding: 3px;
+  padding: 8px;
 }
+
+nav {
+    background: oklch(78.5% 0.115 274.713);
+    padding: 16px;
+    border-radius: 29px;
+    margin: -15px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: oklch(58.5% 0.233 277.117);
   }
 }
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
+   
     place-items: center;
   }
 
   #app {
-    display: grid;
+    
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }

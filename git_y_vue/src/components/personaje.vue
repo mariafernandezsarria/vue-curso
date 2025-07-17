@@ -28,7 +28,7 @@ const volverPagina = () => {
     <h1>PERSONAJES</h1>
     
 
-    <div v-if="personaje" class="card" style="width: 18rem;">
+    <div v-if="personaje" class="card shadow-xl/30" style="width: 18rem;">
         <img :src="personaje.image" alt="imagen personaje" class="card-img-top">
         <div class="card-body">
             <h5 class="card-title"> {{ personaje.name }}</h5>
@@ -37,8 +37,11 @@ const volverPagina = () => {
             <p class="card-text"> Type: {{ personaje.type }} </p>
             <p class="card-text"> Gender: {{ personaje.gender }}</p>
             <p class="card-text"> Origin: {{ personaje.origin.name }}</p>
-            <button v-on:click="volverPagina" class="btn btn-success"> Volver a todos los personajes</button>
-        
+            
+            
+            <button v-on:click="volverPagina" class="bg-indigo-300 p-2 rounded hover:bg-indigo-400"> Volver a todos los personajes</button>
+            
+            
         </div>
     </div> 
 </template>

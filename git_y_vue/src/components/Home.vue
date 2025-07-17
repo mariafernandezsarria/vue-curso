@@ -2,11 +2,11 @@
 </script>
 
 <template>
-    <h1> HOME </h1>
+    <h1 class="font-mono"> HOME </h1>
 
      <div id="app">
-       <nav>
-         <router-link to="/">Home</router-link> |
+       <nav  class="bg-indigo-300 p-8">
+         <router-link to="/" class="active: bg-indigo-400">Home</router-link> |
          <router-link to="/personajes">Personajes</router-link> |
          <router-link to="/episodios">Episodios</router-link>
        </nav>
@@ -19,6 +19,7 @@
 h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #333;
+  color: oklch(58.5% 0.233 277.117) ;
+
 }
 </style>
