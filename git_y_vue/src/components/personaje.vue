@@ -34,7 +34,7 @@ const volverPagina = () => {
             <h5 class="card-title"> {{ personaje.name }}</h5>
             <p class="card-text"> Status: {{ personaje.status }}</p>
             <p class="card-text"> Specie: {{ personaje.species }}</p>
-            <p class="card-text"> Type: {{ personaje.type }}</p>
+            <p class="card-text"> Type: {{ personaje.type }} </p>
             <p class="card-text"> Gender: {{ personaje.gender }}</p>
             <p class="card-text"> Origin: {{ personaje.origin.name }}</p>
             <button v-on:click="volverPagina" class="btn btn-success"> Volver a todos los personajes</button>
