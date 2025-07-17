@@ -1,0 +1,1 @@
+Esto es una mezcla de todo lo que he ido haciendo hasta ahora, con lenguaje javascript framework de vue, consumiendo api con axios, creando views con router y usando por en medio git y github para ir guardandolo.
